@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('post_id')->constrained();
             $table->foreignId('user_id')->constrained();
-            $table->text('content');
+            $table->text('body');
             $table->timestamps();
         });
     }

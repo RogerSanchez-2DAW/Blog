@@ -40,8 +40,7 @@
         <x-primary-button class="mt-4">{{__('Publicar')}}</x-primary-button>
 
     </form>
-
-    {{--<div class="mt-6 bg-white shadow-sm rounded-lg divide-y">
+<div class="mt-6 bg-white shadow-sm rounded-lg divide-y">
         @foreach($comments as $comment)
         <div class="p-6 flex space-x-2">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -62,10 +61,10 @@
                 <div class="flex justify-between items-center mt-4">
                     <p class="text-sm text-gray-900"><strong>Posted By:</strong> {{ $comment->user->name }}</p>
                 </div>
-                <p class="mt-4 text-lg text-gray-900"> {{$comment->message}} </p>
+                <p class="mt-4 text-lg text-gray-900"> {{$comment->body}} </p>
               </div>
         </div>
         @endforeach
     </div>
-</div>--}}
+</div>
 </x-app-layout>

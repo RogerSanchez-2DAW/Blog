@@ -30,14 +30,14 @@ class CommentController extends Controller
     public function store(Request $request, Post $post)
     {
         $validateData = $request->validate([
-            'name' => 'required',
+            'post_id' => 'required|exists:post_id',
             'body' => 'required',
         ]);
 
         $comment = new Comment();
-        $comment->name = $request->name;
-        $comment->body = $request->body;
-        $comment->post_id = $post->id;
+        $comment->post_id = $validateData['post_id'];
+        $comment->user_id = auth()->user()->id;
+        $comment->body= $validateData['body'];
         $comment->save();
 
         return redirect()->route('posts.show', $post);
