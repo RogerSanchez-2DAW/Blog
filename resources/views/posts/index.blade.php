@@ -1,8 +1,8 @@
 <x-app-layout>
     <div class="max-w-6xl mx-auto p-4 sm:p-6 lg:p-8">
         <h1 class="text-center p-10 ">POSTS</h1>
+        @foreach ($posts as $post)
         <div class="mt-6 bg-white shadow-sm rounded-lg divide-y">
-            @foreach ($posts as $post)
             <div class="p-6 flex space-x-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -71,7 +71,7 @@
                 </div>
             </div>
         </div>
-        @endforeach
     </div>
+    @endforeach
 </div>
 </x-app-layout>
